@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Q5: Character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Q5: Author information -->
+    <meta name="author" content="Student">
+
+    <!-- Q5: Responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Q20: Page title -->
+    <title>HTML Assignment 3</title>
+
+    <!-- Q20: Description of the webpage -->
+    <meta name="description" content="HTML Assignment 3 containing iframe, forms, entities and head elements">
+
+    <!-- Q20: Base URL for relative links -->
+    <base href="https://example.com/">
+
+    <!-- Q20: Link to favicon/resource -->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Q20: Style section -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        section {
+            border: 1px solid gray;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        iframe {
+            border: 1px solid black;
+        }
+
+        input,
+        textarea,
+        select {
+            margin: 5px 0;
+            padding: 8px;
+        }
+    </style>
+
+    <!-- Q20: Script section -->
+    <script>
+        // JavaScript can be written here.
+    </script>
+
+</head>
+
+<body>
+
+    <h1>HTML Assignment 3</h1>
+
+
+    <!-- ================================================= -->
+    <!-- Q1: YouTube Video using iframe -->
+    <!-- ================================================= -->
+
+    <section>
+        <h2>1. YouTube Video</h2>
+
+        <iframe
+            width="80%"
+            height="50%"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="YouTube Video"
+            allowfullscreen>
+        </iframe>
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- Q2: Google Map -->
+    <!-- ================================================= -->
+
+    <section>
+        <h2>2. Google Map</h2>
+
+        <!-- loading="lazy" loads the map only when it is needed/near the viewport -->
+        <iframe
+            src="https://www.google.com/maps?q=Mathura&output=embed"
+            title="Google Map showing Mathura"
+            width="600"
+            height="450"
+            loading="lazy">
+        </iframe>
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- Q3: Two iframes -->
+    <!-- ================================================= -->
+
+    <section>
+        <h2>3. Introduction and Hobby Pages</h2>
+
+        <h3>Introduction</h3>
+
+        <iframe
+            src="introduction.html"
+            width="80%"
+            height="200"
+            title="Introduction Page">
+        </iframe>
+
+        <h3>My Hobby</h3>
+
+        <iframe
+            src="hobby.html"
+            width="80%"
+            height="200"
+            title="Hobby Page">
+        </iframe>
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- Q5: UTF-8 Encoding -->
+    <!-- ================================================= -->
+
+    <section>
+        <h2>5. UTF-8 Encoding</h2>
+
+        <p>
+            Hello, my name is Student.
+            नमस्ते, मेरा नाम विद्यार्थी है।
+            こんにちは、私の名前は学生です。
+        </p>
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- Q6: Registration Form -->
+    <!-- ================================================= -->
+
+    <section>
+        <h2>6. User Registration Form</h2>
+
+        <form>
+
+            <label>Full Name:</label><br>
+            <input type="text" name="fullname" required><br>
+
+            <label>Email Address:</label><br>
+            <input type="email" name="email" required><br>
+
+            <label>Password:</label><br>
+            <input type="password" name="password" required><br>
+
+            <label>Confirm Password:</label><br>
+            <input type="password" name="confirm_password" required><br>
+
+            <input type="submit" value="Register">
+
+        </form>
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- Q7: Login Form + CSRF Token -->
+    <!-- ================================================= -->
+
+    <section>
+        <h2>7. Login Form</h2>
+
+        <!-- CSRF token helps protect forms from unauthorized cross-site requests. -->
+
+        <form>
+
+            <label>Username:</label><br>
+            <input type="text" name="username"><br>
+
+            <label>Password:</label><br>
+            <input type="password" name="password"><br>
+
+            <input type="hidden" name="csrf_token" value="dummy12345">
+
+            <input type="submit" value="Login">
+
+        </form>
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- Q8: Feedback Form -->
+    <!-- ================================================= -->
+
+    <section>
+        <h2>8. Feedback Form</h2>
+
+        <form method="post" action="#">
+
+            <label>Feedback:</label><br>
+
+            <textarea
+                name="feedback"
+                rows="5"
+                cols="40">
+            </textarea>
+
+            <br>
+
+            <p>Rating:</p>
+
+            <input type="radio" name="rating" value="Good">
+            <label>Good</label>
+
+            <input type="radio" name="rating" value="Average">
+            <label>Average</label>
+
+            <input type="radio" name="rating" value="Poor">
+            <label>Poor</label>
+
+            <br><br>
+
+            <input type="submit" value="Submit Feedback">
+
+        </form>
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- Q9: File Upload -->
+    <!-- ================================================= -->
+
+    <section>
+        <h2>9. File Upload Form</h2>
+
+        <form>
+
+            <input
+                type="file"
+                name="file"
+                accept=".jpg,.png">
+
+            <p>
+                Only JPG and PNG image files are allowed.
+            </p>
+
+            <input type="submit" value="Upload">
+
+        </form>
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- Q10: Contact Form -->
+    <!-- ================================================= -->
+
+    <section>
+        <h2>10. Contact Form</h2>
+
+        <form>
+
+            <label>Full Name:</label><br>
+            <input
+                type="text"
+                name="fullname"
+                placeholder="Enter your full name"
+                required>
+            <br>
+
+            <label>Email:</label><br>
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required>
+            <br>
+
+            <label>Subject:</label><br>
+            <input
+                type="text"
+                name="subject"
+                placeholder="Enter subject"
+                required>
+            <br>
+
+            <label>Message:</label><br>
+            <textarea
+                name="message"
+                placeholder="Enter your message"
+                required>
+            </textarea>
+
+            <br>
+
+            <input type="submit" value="Send Message">
+
+        </form>
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- Q11: Student Information -->
+    <!-- ================================================= -->
+
+    <section>
+        <h2>11. Student Information</h2>
+
+        <form>
+
+            <label>Name:</label><br>
+            <input type="text" name="name"><br>
+
+            <label>Roll Number:</label><br>
+            <input type="text" name="rollno"><br>
+
+            <label>Course:</label><br>
+
+            <select name="course">
+
+                <option value="" disabled selected>
+                    Select Course
+                </option>
+
+                <option value="BCA">BCA</option>
+                <option value="BTech">B.Tech</option>
+                <option value="MCA">MCA</option>
+                <option value="MBA">MBA</option>
+
+            </select>
+
+            <br><br>
+
+            <input type="submit" value="Submit">
+
+        </form>
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- Q12: HTML Entities -->
+    <!-- ================================================= -->
+
+    <section>
+        <h2>12. HTML Entities</h2>
+
+        <p>
+            Less than: &lt;
+            <br>
+
+            Greater than: &gt;
+            <br>
+
+            Ampersand: &amp;
+            <br>
+
+            Double quotation: &quot;
+            <br>
+
+            Single quotation: &apos;
+            <br>
+
+            Copyright: &copy;
+            <br>
+
+            Trademark: &trade;
+            <br>
+
+            Registered: &reg;
+        </p>
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- Q13: Three Languages -->
+    <!-- ================================================= -->
+
+    <section>
+        <h2>13. Three Languages</h2>
+
+        <p>
+            English: Welcome to my webpage.
+        </p>
+
+        <p>
+            Hindi: मेरी वेबसाइट पर आपका स्वागत है।
+        </p>
+
+        <p>
+            French: Bienvenue sur ma page web.
+        </p>
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- Q14: External Website -->
+    <!-- ================================================= -->
+
+    <section>
+        <h2>14. External Website</h2>
+
+        <iframe
+            src="https://www.wikipedia.org"
+            width="80%"
+            height="400"
+            title="Wikipedia Website">
+        </iframe>
+
+        <p>
+            Some websites may not allow embedding for security reasons.
+        </p>
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- Q15: Payment Form -->
+    <!-- ================================================= -->
+
+    <section>
+        <h2>15. Payment Form</h2>
+
+        <form>
+
+            <label>Cardholder Name:</label><br>
+            <input
+                type="text"
+                name="cardholder"
+                required>
+            <br>
+
+            <label>Card Number:</label><br>
+            <input
+                type="text"
+                name="cardnumber"
+                required>
+            <br>
+
+            <label>Expiry Date:</label><br>
+            <input
+                type="month"
+                name="expiry"
+                required>
+            <br>
+
+            <label>CVV:</label><br>
+            <input
+                type="password"
+                name="cvv"
+                required>
+            <br><br>
+
+            <input type="submit" value="Pay Now">
+
+        </form>
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- Q16: URI Encoding -->
+    <!-- ================================================= -->
+
+    <section>
+        <h2>16. URI Encoding</h2>
+
+        <p>
+            Correct encoded URL:
+        </p>
+
+        <a href="https://example.com/search?query=HTML%20%26%20CSS">
+            Search HTML & CSS
+        </a>
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- Q18: Quotations -->
+    <!-- ================================================= -->
+
+    <section>
+        <h2>18. Quotations</h2>
+
+        <blockquote>
+            Learning HTML is an important step in web development.
+            It helps us create structured web pages and understand how
+            websites work.
+            HTML &amp; CSS work together to create attractive webpages.
+        </blockquote>
+
+        <p>
+            My teacher always says,
+            <q>Practice makes a person perfect.</q>
+        </p>
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- Q19: Form Security -->
+    <!-- ================================================= -->
+
+    <section>
+        <h2>19. Form Security</h2>
+
+        <form autocomplete="off">
+
+            <label>Username:</label><br>
+
+            <input
+                type="text"
+                name="username"
+                required>
+            <br>
+
+            <label>Email:</label><br>
+
+            <input
+                type="email"
+                name="email"
+                required>
+            <br>
+
+            <label>Password:</label><br>
+
+            <input
+                type="password"
+                name="password"
+                required>
+            <br><br>
+
+            <input type="submit" value="Submit">
+
+        </form>
+
+        <p>
+            Turning off autocomplete can improve security by preventing
+            browsers from automatically storing or filling sensitive
+            information such as passwords and personal details.
+        </p>
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- Q20: Important Head Elements -->
+    <!-- ================================================= -->
+
+    <section>
+        <h2>20. Important Head Elements</h2>
+
+        <p>
+            The important HTML head elements used in this webpage are:
+        </p>
+
+        <ul>
+            <li>&lt;title&gt; - Defines the title of the webpage.</li>
+
+            <li>
+                &lt;meta&gt; - Provides metadata such as
+                charset, description and author.
+            </li>
+
+            <li>
+                &lt;base&gt; - Defines the base URL for relative links.
+            </li>
+
+            <li>
+                &lt;link&gt; - Connects external resources such as
+                favicon or stylesheet.
+            </li>
+
+            <li>
+                &lt;style&gt; - Contains CSS styles for the webpage.
+            </li>
+
+            <li>
+                &lt;script&gt; - Contains JavaScript code.
+            </li>
+        </ul>
+
+    </section>
+
+
+</body>
+</html>
