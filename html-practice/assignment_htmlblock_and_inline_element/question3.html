@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Registration Form</title>
+</head>
+<body>
+    <h1>Course Registration Form</h1>
+
+    <!-- Student Registration Form -->
+    <form>
+        <fieldset>
+            <legend>Student Information</legend>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <label for="course">Select Course:</label>
+            <select id="course" name="course">
+                <option>Web Development</option>
+                <option>Cybersecurity</option>
+                <option>Data Science</option>
+                <option>Artificial Intelligence</option>
+            </select>
+            <br><br>
+
+            <input type="submit" value="Register">
+            <input type="reset" value="Reset">
+        </fieldset>
+    </form>
+
+    <!-- Available Course Schedule -->
+    <h2>Course Schedule</h2>
+    <table border="1">
+        <tr>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Instructor</th>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>10 AM</td>
+            <td>Rahul Sharma</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>12 PM</td>
+            <td>Priya Verma</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>2 PM</td>
+            <td>Amit Kumar</td>
+        </tr>
+    </table>
+</body>
+</html>
