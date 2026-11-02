@@ -3,9 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Grid Layout</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+        .container{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(57, 174, 47);
+            display: grid;
+            padding: 10px;
+            row-gap: 10px;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-columns: 100px 100px 100px;
+            gap: 10px;
+        }
+        .item{
+            background-color: rgb(48, 4, 123);
+            border: 5px solid rgb(0, 0, 0);
+        }
+        .header,.footer{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        .sidebar{
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        .content{
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="item header">header</div>
+        <div class="item sidebar">sidebar</div>
+        <div class="item content">content</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item footer">footer</div>
+
+    </div>
     
 </body>
 </html>
