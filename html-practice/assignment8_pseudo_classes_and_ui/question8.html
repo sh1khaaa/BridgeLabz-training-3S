@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8 - Question 8</title>
+    <link rel="stylesheet" href="question8.css">
+</head>
+<body>
+<header><h1>Box-Sizing Comparison</h1><p>Compare content-box and border-box.</p></header>
+<main class="comparison">
+  <section class="comparison-card">
+    <h2>Default: content-box</h2>
+    <div class="demo content-box">Same declared width<br>200px</div>
+    <p>With <code>content-box</code>, padding and border are added outside the declared width. Total width becomes larger.</p>
+  </section>
+  <section class="comparison-card">
+    <h2>box-sizing: border-box</h2>
+    <div class="demo border-box">Same declared width<br>200px</div>
+    <p>With <code>border-box</code>, padding and border are included inside the declared width of 200px.</p>
+  </section>
+</main>
+<footer>Both examples use the same width, padding and border values.</footer>
+</body>
+</html>
