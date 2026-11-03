@@ -1,0 +1,2 @@
+/* Assignment 10 - Question 3: Product Catalog */
+body{font-family:Arial,sans-serif;background:#f6f7f9}.product-card{border:0;transition:transform .25s,box-shadow .25s}.product-card:hover{transform:translateY(-5px);box-shadow:0 1rem 2rem #0002!important}.product-card img{height:180px;object-fit:cover}

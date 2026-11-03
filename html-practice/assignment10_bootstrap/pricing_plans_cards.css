@@ -1,0 +1,2 @@
+/* Assignment 10 - Question 8: Pricing Plans Cards */
+body{font-family:Arial,sans-serif;background:#f7f8fc;color:#26364a}.plan-card{border:0;border-radius:16px;transition:transform .25s,box-shadow .25s}.plan-card:hover{transform:translateY(-7px);box-shadow:0 1rem 2rem #0002!important}.pro-plan{background:#315c9b;color:white}.pro-plan p{color:#e6edf8}
